@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget planner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Monthly budget planner</h2>
+        <!-- monthly income -->
+        <div>
+            <h3>Monthly income</h3>
+            <input type="number" id="salaryInput" placeholder="Enter Salary">
+            <button onclick="addSalary()">add salary</button>
+        </div>
+
+        <!-- expenses -->
+         <div class="input-group">
+            <h3>monthly expenses</h3>
+            <div class="expenseCategory">
+                <h4>housing</h4>
+                <input type="number" id="rentInput" placeholder="Rent/Mortage">
+                <button onclick="addRent()">Add rent</button>
+
+                <input type="number" id="utilitiesInput" placeholder="Utilities">
+                <button onclick="addUtilities()">utilities</button>
+            </div>
+
+            <div class="expenseCategory">
+                <h4>Daily Living</h4>
+                <input type="number" id="groceriesInput" placeholder="Groceries">
+                <button onclick="addGroceries()">Add Groceries</button>
+                <br>
+                <input type="number" id="transportInput" placeholder="transportation">
+                <button onclick="addTransport()">Add Transport</button>
+            </div>
+
+            <div class="expenseCategory">
+                <h4>Other Expenses</h4>
+                <input type="number" id="entertainmentInput" placeholder="Entertainment">
+                <button onclick="addEntertainment()">Add Entertainment</button>
+                <br>
+                <input type="number" id="miscInput" placeholder="Miscellaneous">
+                <button onclick="addMisc()">Add Music</button>
+            </div>
+         </div>
+
+        <!-- summary of monthly income including expenses -->
+         <div class="summary">
+            <h3>
+                Monthly summary
+            </h3>
+
+            <p>total income : $<span id="totalIncome">0</span></p>
+             <p>Monthly Rent : $<span id="rentExpenses">0</span></p>
+             <p>Monthly utilities : $ <span id="utilitiesExpenses">0</span></p>
+              <p>Monthly groceries : $ <span id="groceriesExpenses">0</span></p>
+         </div>
+
+         <div class="yearly-summary">
+            <h3>Yearly Projections</h3>
+            <p>Yearly income $ <span id="yearlyIncome">0</span></p>
+            <p>Yearly rent $ <span id="yearlyRent">0</span></p>
+            <p>Yearly utilities $ <span id="yearlyUtilites">0</span></p>
+            <p>Yearly groceries $ <span id="yearlyGroceries">0</span></p>
+         </div>
+    </div>
+</body>
+</html>
